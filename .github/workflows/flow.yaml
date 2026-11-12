@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: building project
-      run: echo "Building project (maven/nodejs/bunjs/docker)
+      run: echo "Building project (maven/nodejs/bunjs/docker)"
       
   test:
     name: Testing/Checking
