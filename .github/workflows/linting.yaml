@@ -1,0 +1,33 @@
+name: linting .py files
+
+# setup: &ul ubuntu-latest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.py' # single `*` .yaml represent the special pointer
+  pull_request:
+    branches: [main]
+    paths:
+      - '**.py' 
+
+jobs:
+
+  linting:
+    name: fetching code (checkout git branch)
+    runs-on: ubuntu-latest # intead of this use `*ul` as alias
+
+    steps:
+      # step 1: clone repository
+      - name: Checkout repository code
+        uses: actions/checkout@v7
+
+      # step 2: installing linting tool for python 
+      - name: installing linting tool
+        run: pip install ruff
+
+      # step 3: run Linting tool for checking errors
+      - name: Run ruff tool
+        run: ruff -check .
+
