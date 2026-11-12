@@ -29,5 +29,5 @@ jobs:
 
       # step 3: run Linting tool for checking errors
       - name: Run ruff tool
-        run: ruff -check .
+        run: ruff check .
 
