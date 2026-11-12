@@ -1,0 +1,38 @@
+name: devops workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  code:
+    name: fetching codes and project repo
+    runs-on: ubuntu-latest
+    steps:
+    - name: gitclone or wget
+      run: echo "fetching code.."
+    - name: extracting code and cd into it
+      run: echo "cd into project"
+
+  build:
+    name: Building
+    runs-on: ubuntu-latest
+    steps:
+    - name: building project
+      run: echo "Building project (maven/nodejs/bunjs/docker)
+      
+  test:
+    name: Testing/Checking
+    runs-on: ubuntu-latest
+    steps:
+    - name: test project
+      run: echo "Testing project"
+    - name: checking connectivity
+      run: curl -I https://google.com
+
+  deploy:
+    name: deploy on ec2 intance
+    steps:
+    - name: deploying
+      run: echo "Deploying on aws ec2 instace"
+
+
