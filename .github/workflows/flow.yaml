@@ -31,6 +31,7 @@ jobs:
 
   deploy:
     name: deploy on ec2 intance
+    runs-on: ubuntu-latest
     steps:
     - name: deploying
       run: echo "Deploying on aws ec2 instace"
