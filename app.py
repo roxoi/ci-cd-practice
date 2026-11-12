@@ -7,7 +7,8 @@ app = FastAPI()
 def read_root():
     return {"message": "Welcome to my Python API!"}
 
-app.get("/error") # error 
+erorprint()
+@app.get("/error") # error 
 def error():
     return {"message": "Server error"}
 
