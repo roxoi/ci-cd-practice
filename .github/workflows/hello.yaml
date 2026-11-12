@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: hello
         run: echo "hello roxoi"
-      - name: ping
-        run: ping -c 4 google.com
+      - name: Check internet connectivity
+        run: curl -I https://google.com
 
